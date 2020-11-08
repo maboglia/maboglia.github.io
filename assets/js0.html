@@ -1,0 +1,585 @@
+<article class="markdown-body entry-content" itemprop="text">
+    <h1><a href="#corso-javascript" aria-hidden="true" class="anchor" id="user-content-corso-javascript"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Corso
+        Javascript
+    </h1>
+
+    <ul>
+        <li><a href="#corso-javascript">Corso Javascript</a>
+            <ul>
+                <li><a href="#javascript-%C3%A8-un-linguaggio-di-programmazione">JavaScript è un linguaggio di programmazione</a></li>
+                <li><a href="#ruolo-di-js-nel-web-design">ruolo di js nel web design</a></li>
+                <li><a href="#risorse-disponibili-online">Risorse disponibili online</a></li>
+                <li><a href="#hello-world">Hello, World</a></li>
+                <li><a href="#esecuzione-del-codice">Esecuzione del codice</a></li>
+                <li><a href="#javascript-incorporato-in-una-pagina-html">Javascript incorporato in una pagina html</a></li>
+                <li><a href="#javascript-collegato-ad-una-pagina-html">Javascript collegato ad una pagina html</a></li>
+                <li><a href="#come-mostrare-a-video-i-dati">Come mostrare a video i dati</a></li>
+            </ul>
+        </li>
+        <li><a href="#strutture-del-linguaggio">Strutture del linguaggio</a>
+            <ul>
+                <li><a href="#javascript-%C3%A8-case-sensitive">JavaScript è <strong>CASE SENSITIVE</strong></a></li>
+                <li><a href="#terminare-le-istruzioni-con-punto-e-virgola">Terminare le istruzioni con punto e virgola (;)</a></li>
+                <li><a href="#convenzioni-di-naming">Convenzioni di naming:</a></li>
+                <li><a href="#identificatori">Identificatori</a>
+                    <ul>
+                        <li><a href="#per-esempio">Per esempio</a></li>
+                    </ul>
+                </li>
+                <li><a href="#parole-chiave-riservate">Parole chiave riservate</a> - <a href="#instanceof">instanceof</a> - <a href="#typeof">typeof</a> - <a href="#delete">delete</a> - <a href="#use-strict">use strict</a> - <a href="#const">const</a> -
+                    <a href="#var-let">var, let</a>
+                </li>
+                <li><a href="#variabili">Variabili</a></li>
+                <li><a href="#operatori">operatori</a></li>
+                <li><a href="#commenti">Commenti</a></li>
+                <li><a href="#literals---letterali-valori-letterali-per-i-tipi-di-dato">Literals - Letterali (valori letterali per i tipi di dato)</a></li>
+            </ul>
+        </li>
+        <li><a href="#strutture-del-linguaggio">Strutture del linguaggio</a>
+            <ul>
+                <li><a href="#costrutti-di-controllo-del-flusso">Costrutti di controllo del flusso</a></li>
+                <li><a href="#costrutti-di-iterazione-cicli">Costrutti di iterazione (cicli)</a></li>
+            </ul>
+        </li>
+        <li><a href="#tipi-di-dato">Tipi di dato</a>
+            <ul>
+                <li><a href="#boolean">Boolean</a>
+                    <ul>
+                        <li><a href="#per-esempio">Per esempio</a></li>
+                        <li><a href="#altri-esempi">Altri esempi</a></li>
+                    </ul>
+                </li>
+                <li><a href="#number">Number</a>
+                    <ul>
+                        <li><a href="#js-numbers">JS numbers</a></li>
+                        <li><a href="#per-esempio">Per esempio:</a></li>
+                        <li><a href="#math-object">Math Object</a></li>
+                    </ul>
+                </li>
+                <li><a href="#string">String</a></li>
+                <li><a href="#valore-nullo-e-valore-undefined">valore nullo e valore undefined</a></li>
+                <li><a href="#funzioni">Funzioni</a></li>
+                <li><a href="#date-object">Date Object</a>
+                    <ul>
+                        <li><a href="#codice-esempio">codice esempio</a></li>
+                    </ul>
+                </li>
+                <li><a href="#array">Array</a></li>
+                <li><a href="#objects">Objects</a></li>
+                <li><a href="#timers">Timers</a>
+                    <ul>
+                        <li><a href="#per-esempio">Per esempio</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#ricapitolando">Ricapitolando</a></li>
+    </ul>
+
+    <h2><a href="#javascript-è-un-linguaggio-di-programmazione" aria-hidden="true" class="anchor" id="user-content-javascript-è-un-linguaggio-di-programmazione"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JavaScript
+        è un linguaggio di programmazione</h2>
+    <p>utilizzato comunemente come parte dell'esperienza di navigazione, permette di creare interazioni con l'utente, controllare la navigazione, gestire la comunicazione asincrona, e modificare il contenuto del documento.</p>
+    <p>___Fonte: <a href="https://en.wikipedia.org/wiki/JavaScript___" rel="nofollow">https://en.wikipedia.org/wiki/JavaScript___</a></p>
+    <h2><a href="#ruolo-di-js-nel-web-design" aria-hidden="true" class="anchor" id="user-content-ruolo-di-js-nel-web-design"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ruolo
+        di js nel web design</h2>
+    <ul>
+        <li>Html: contenuto</li>
+        <li>Css: presentazione</li>
+        <li>Js: comportamento</li>
+    </ul>
+    <h2><a href="#risorse-disponibili-online" aria-hidden="true" class="anchor" id="user-content-risorse-disponibili-online"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Risorse
+        disponibili online</h2>
+    <ul>
+        <li><a href="https://developer.mozilla.org/it/docs/Web/JavaScript" rel="nofollow">Javascript reference</a></li>
+        <li><a href="http://jstherightway.org/" rel="nofollow">JS the right way</a></li>
+        <li><a href="https://javascript.info/" rel="nofollow">JSinfo</a></li>
+        <li><a href="https://github.com/getify/You-Dont-Know-JS">You-Dont-Know-JS</a></li>
+        <li><a href="https://www.w3schools.com/" rel="nofollow">w3schools</a></li>
+        <li><a href="https://www.udacity.com/course/intro-to-javascript--ud803" rel="nofollow">Udacity Course</a></li>
+        <li><a href="http://www.html.it/guide/guida-javascript-di-base/" rel="nofollow">html.it</a></li>
+    </ul>
+    <h2><a href="#hello-world" aria-hidden="true" class="anchor" id="user-content-hello-world"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Hello,
+        World
+    </h2>
+    <p>Hello, World! nel browser</p>
+    <div class="highlight highlight-source-js"><pre><span class="pl-en">alert</span>(<span class="pl-s"><span class="pl-pds">'</span>Hello, World!<span class="pl-pds">'</span></span>)
+</pre></div>
+    <p>Hello, World! nel terminale</p>
+    <div class="highlight highlight-source-js"><pre><span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">'</span>Hello, World!<span class="pl-pds">'</span></span>)</pre></div>
+    <h2><a href="#esecuzione-del-codice" aria-hidden="true" class="anchor" id="user-content-esecuzione-del-codice"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Esecuzione
+        del codice</h2>
+    <ul>
+        <li>Interpretazione in una pagina web</li>
+        <li>Interpretazione in una console del browser</li>
+        <li>Interpretazione in terminale (node.js)</li>
+    </ul>
+    <h2><a href="#javascript-incorporato-in-una-pagina-html" aria-hidden="true" class="anchor" id="user-content-javascript-incorporato-in-una-pagina-html"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Javascript
+        incorporato in una pagina html</h2>
+    <div class="highlight highlight-text-html-basic"><pre>&lt;!doctype html&gt;
+&lt;<span class="pl-ent">html</span>&gt;
+    &lt;<span class="pl-ent">head</span>&gt;&lt;/<span class="pl-ent">head</span>&gt;
+    &lt;<span class="pl-ent">body</span>&gt;
+        &lt;<span class="pl-ent">script</span>&gt;<span class="pl-s1"></span>
+<span class="pl-s1">            <span class="pl-en">alert</span>(<span class="pl-s"><span class="pl-pds">'</span>Hello world<span class="pl-pds">'</span></span>)</span>
+<span class="pl-s1">        </span><span class="pl-s1">&lt;</span>/<span class="pl-ent">script</span>&gt;
+    &lt;/<span class="pl-ent">body</span>&gt;
+&lt;/<span class="pl-ent">html</span>&gt;</pre></div>
+    <h2><a href="#javascript-collegato-ad-una-pagina-html" aria-hidden="true" class="anchor" id="user-content-javascript-collegato-ad-una-pagina-html"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Javascript
+        collegato ad una pagina html</h2>
+    <div class="highlight highlight-text-html-basic"><pre>&lt;!doctype html&gt;
+&lt;<span class="pl-ent">html</span>&gt;
+    &lt;<span class="pl-ent">head</span>&gt;&lt;/<span class="pl-ent">head</span>&gt;
+    &lt;<span class="pl-ent">body</span>&gt;
+        &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>esempio.js<span class="pl-pds">"</span></span>&gt;<span class="pl-s1">&lt;</span>/<span class="pl-ent">script</span>&gt;
+    &lt;/<span class="pl-ent">body</span>&gt;
+&lt;/<span class="pl-ent">html</span>&gt;</pre></div>
+    <div class="highlight highlight-source-js"><pre><span class="pl-c"><span class="pl-c">//</span> file esempio.js</span>
+<span class="pl-en">alert</span>(<span class="pl-s"><span class="pl-pds">'</span>Hello world<span class="pl-pds">'</span></span>)</pre></div>
+    <h2><a href="#come-mostrare-a-video-i-dati" aria-hidden="true" class="anchor" id="user-content-come-mostrare-a-video-i-dati"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Come
+        mostrare a video i dati</h2>
+    <ul>
+        <li>window
+            <ul>
+                <li><a href="http://github.com/maboglia/Javascript2018/blob/master/appunti">window.alert()</a></li>
+                <li><a href="http://github.com/maboglia/Javascript2018/blob/master/esempi/01_basic_foundations/009_prompt.html">window.prompt()</a></li>
+                <li><a href="http://github.com/maboglia/Javascript2018/blob/master/esempi/01_basic_foundations/010_confirm.html">window.confirm()</a></li>
+            </ul>
+        </li>
+        <li>document
+            <ul>
+                <li><a href="http://github.com/maboglia/Javascript2018/blob/master/esempi/01_basic_foundations/003_document_write.html">document.write()</a></li>
+                <li>document.writeln()</li>
+            </ul>
+        </li>
+        <li>innerHTML</li>
+        <li>console.log()</li>
+    </ul>
+    <h1><a href="#strutture-del-linguaggio" aria-hidden="true" class="anchor" id="user-content-strutture-del-linguaggio"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Strutture
+        del linguaggio</h1>
+    <h2><a href="#javascript-è-case-sensitive" aria-hidden="true" class="anchor" id="user-content-javascript-è-case-sensitive"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JavaScript
+        è <strong>CASE SENSITIVE</strong></h2>
+    <h2><a href="#terminare-le-istruzioni-con-punto-e-virgola-" aria-hidden="true" class="anchor" id="user-content-terminare-le-istruzioni-con-punto-e-virgola-"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Terminare
+        le istruzioni con punto e virgola (;)</h2>
+    <ul>
+        <li>E' possibile l'uso del carattere (;) per la separazione di frasi, si può omettere se queste si trovano su linee differenti (non fatelo!)</li>
+        <li>Gli interpreti di JavaScript trattano i fine linea come fine istruzione, se la istruzione successiva non può interpretarsi come continuazione della precedente.</li>
+    </ul>
+    <h2><a href="#convenzioni-di-naming" aria-hidden="true" class="anchor" id="user-content-convenzioni-di-naming"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Convenzioni
+        di naming:</h2>
+    <ul>
+        <li>CamelCase,</li>
+        <li>camelCase,</li>
+        <li>snake_case</li>
+    </ul>
+    <h2><a href="#identificatori" aria-hidden="true" class="anchor" id="user-content-identificatori"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Identificatori</h2>
+    <p>Gli identificatori in javascript cominciano con</p>
+    <ul>
+        <li>una lettera,</li>
+        <li>una underline (_),</li>
+        <li>un carattere di dollaro ($);</li>
+    </ul>
+    <p>seguito da</p>
+    <ul>
+        <li>lettere,</li>
+        <li>numeri,</li>
+        <li>underline,</li>
+        <li>e caratteri di dollaro</li>
+    </ul>
+    <h3><a href="#per-esempio" aria-hidden="true" class="anchor" id="user-content-per-esempio"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Per
+        esempio
+    </h3>
+    <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> contatore;
+<span class="pl-k">var</span> _indice;
+<span class="pl-k">var</span> $indice;
+<span class="pl-k">var</span> $__$__$;</pre></div>
+    <h2><a href="#parole-chiave-riservate" aria-hidden="true" class="anchor" id="user-content-parole-chiave-riservate"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Parole
+        chiave riservate</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>-</th>
+                <th>-</th>
+                <th>-</th>
+                <th>-</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>abstract</td>
+                <td>else</td>
+                <td>instanceof</td>
+                <td>super</td>
+            </tr>
+            <tr>
+                <td>boolean</td>
+                <td>enum</td>
+                <td>int</td>
+                <td>switch</td>
+            </tr>
+            <tr>
+                <td>break</td>
+                <td>export</td>
+                <td>interface</td>
+                <td>synchronized</td>
+            </tr>
+            <tr>
+                <td>byte</td>
+                <td>extends</td>
+                <td>let</td>
+                <td>this</td>
+            </tr>
+            <tr>
+                <td>case</td>
+                <td>false</td>
+                <td>long</td>
+                <td>throw</td>
+            </tr>
+            <tr>
+                <td>catch</td>
+                <td>final</td>
+                <td>native</td>
+                <td>throws</td>
+            </tr>
+            <tr>
+                <td>char</td>
+                <td>finally</td>
+                <td>new</td>
+                <td>transient</td>
+            </tr>
+            <tr>
+                <td>class</td>
+                <td>float</td>
+                <td>null</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>const</td>
+                <td>for</td>
+                <td>package</td>
+                <td>try</td>
+            </tr>
+            <tr>
+                <td>continue</td>
+                <td>function</td>
+                <td>private</td>
+                <td>typeof</td>
+            </tr>
+            <tr>
+                <td>debugger</td>
+                <td>goto</td>
+                <td>protected</td>
+                <td>var</td>
+            </tr>
+            <tr>
+                <td>default</td>
+                <td>if</td>
+                <td>public</td>
+                <td>void</td>
+            </tr>
+            <tr>
+                <td>delete</td>
+                <td>implements</td>
+                <td>return</td>
+                <td>volatile</td>
+            </tr>
+            <tr>
+                <td>do</td>
+                <td>import</td>
+                <td>short</td>
+                <td>while</td>
+            </tr>
+            <tr>
+                <td>double</td>
+                <td>in</td>
+                <td>static</td>
+                <td>with</td>
+            </tr>
+        </tbody>
+    </table>
+    <h4><a href="#instanceof" aria-hidden="true" class="anchor" id="user-content-instanceof"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>instanceof</h4>
+    <p>Verifica se un oggetto è instanza di qualche prototipo.</p>
+    <h4><a href="#typeof" aria-hidden="true" class="anchor" id="user-content-typeof"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>typeof</h4>
+    <p>Ritorna una stringa indicante il tipo di dato che ha una variabile.
+        <a href="http://github.com/maboglia/Javascript2018/blob/master/esempi/01_basic_foundations/010_confirm.html">esempio</a></p>
+    <h4><a href="#delete" aria-hidden="true" class="anchor" id="user-content-delete"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>delete</h4>
+    <p>Operatore che rimuove proprietà di un oggetto.</p>
+    <h4><a href="#use-strict" aria-hidden="true" class="anchor" id="user-content-use-strict"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>use
+        strict
+    </h4>
+    <p>Direttiva per l'interprete di JavaScript, che indica l'uso del modo strict.</p>
+    <h4><a href="#const" aria-hidden="true" class="anchor" id="user-content-const"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>const</h4>
+    <p>Parola chiave per la dichiarazione di una costante.
+        <a href="http://github.com/maboglia/Javascript2018/blob/master/esempi/01_basic_foundations/008_const.html">esempio</a></p>
+    <h4><a href="#var-let" aria-hidden="true" class="anchor" id="user-content-var-let"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>var,
+        let
+    </h4>
+    <p>Parola chiave per la dichiarazione di una variabile.</p>
+    <h2><a href="#variabili" aria-hidden="true" class="anchor" id="user-content-variabili"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Variabili</h2>
+    <ul>
+        <li>identificatore e visibilità (scope)</li>
+        <li>dichiarazione e inizializzazione di variabili</li>
+        <li><a href="http://github.com/maboglia/Javascript2018/blob/master/esempi/01_basic_foundations/001_var.html">esempi</a></li>
+    </ul>
+    <h2><a href="#operatori" aria-hidden="true" class="anchor" id="user-content-operatori"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>operatori</h2>
+    <ul>
+        <li><a href="http://github.com/maboglia/Javascript2018/blob/master/esempi/01_basic_foundations/011_precedenzaOperatori.html">precedenza degli operatori</a></li>
+        <li><a href="http://github.com/maboglia/Javascript2018/blob/master/esempi/01_basic_foundations/013_assignment.html">operatori di assegnamento</a></li>
+        <li><a href="http://github.com/maboglia/Javascript2018/blob/master/esempi/01_basic_foundations/016_confronto.html">operatori di comparazione</a></li>
+        <li><a href="http://github.com/maboglia/Javascript2018/blob/master/esempi/01_basic_foundations/014_operatoriUnari.html">operatori unari</a></li>
+        <li><a href="http://github.com/maboglia/Javascript2018/blob/master/esempi/01_basic_foundations/018_ANDLogico.html">operatori logici AND</a></li>
+        <li><a href="http://github.com/maboglia/Javascript2018/blob/master/esempi/01_basic_foundations/019_ORLogico.html">operatori logici OR</a></li>
+        <li><a href="http://github.com/maboglia/Javascript2018/blob/master/esempi/03_arrays_strings/017_comparaStringhe.html">operatori su stringhe</a></li>
+    </ul>
+    <h2><a href="#commenti" aria-hidden="true" class="anchor" id="user-content-commenti"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Commenti</h2>
+    <p>Esistono due tipi di commenti:</p>
+    <div class="highlight highlight-source-js"><pre><span class="pl-c"><span class="pl-c">//</span>  commento su una riga</span>
+
+<span class="pl-c"><span class="pl-c">//</span>puoi usarlo per commentare un'istruzione:</span>
+<span class="pl-k">var</span> a <span class="pl-k">=</span> <span class="pl-c1">5</span>; <span class="pl-c"><span class="pl-c">//</span>assegno la variabile</span>
+
+<span class="pl-c"><span class="pl-c">/*</span> </span>
+<span class="pl-c">    commento</span>
+<span class="pl-c">    su diverse</span>
+<span class="pl-c">    righe </span>
+<span class="pl-c"><span class="pl-c">*/</span></span></pre></div>
+    <h2><a href="#literals---letterali-valori-letterali-per-i-tipi-di-dato" aria-hidden="true" class="anchor" id="user-content-literals---letterali-valori-letterali-per-i-tipi-di-dato"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Literals
+        - Letterali (valori letterali per i tipi di dato)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>tipo</th>
+                <th>esempio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Numeri interi</td>
+                <td>192</td>
+            </tr>
+            <tr>
+                <td>Numeri float</td>
+                <td>1.4</td>
+            </tr>
+            <tr>
+                <td>Stringhe di testo</td>
+                <td>"Hello World!", 'Hello World!'</td>
+            </tr>
+            <tr>
+                <td>Valori logici</td>
+                <td>true, false</td>
+            </tr>
+            <tr>
+                <td>espressioni regolari</td>
+                <td>/[A-Za-z]/</td>
+            </tr>
+            <tr>
+                <td>Valore nullo</td>
+                <td>null</td>
+            </tr>
+            <tr>
+                <td>Valore undefined</td>
+                <td>undefined</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h1><a href="#strutture-del-linguaggio-1" aria-hidden="true" class="anchor" id="user-content-strutture-del-linguaggio-1"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Strutture
+        del linguaggio</h1>
+    <h2><a href="#costrutti-di-controllo-del-flusso" aria-hidden="true" class="anchor" id="user-content-costrutti-di-controllo-del-flusso"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Costrutti
+        di controllo del flusso</h2>
+    <ul>
+        <li><a href="http://github.com/maboglia/Javascript2018/blob/master/appunti/Lesson1_05_Control_flow.md">Strutture condizionali</a>
+            <ul>
+                <li><a href="http://github.com/maboglia/Javascript2018/blob/master/esempi/01_basic_foundations/018_ANDLogico.html">esempio if</a></li>
+                <li><a href="http://github.com/maboglia/Javascript2018/blob/master/esempi/02_control_flow/02_switch.js">esempio switch</a></li>
+            </ul>
+        </li>
+    </ul>
+    <h2><a href="#costrutti-di-iterazione-cicli" aria-hidden="true" class="anchor" id="user-content-costrutti-di-iterazione-cicli"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Costrutti
+        di iterazione (cicli)</h2>
+    <ul>
+        <li><a href="http://github.com/maboglia/Javascript2018/blob/master/appunti/Lesson1_05_Control_flow.md">For Loop</a>
+            <ul>
+                <li><a href="http://github.com/maboglia/Javascript2018/blob/master/esempi/02_control_flow/02_for_loop.js">esempi</a></li>
+            </ul>
+        </li>
+        <li><a href="http://github.com/maboglia/Javascript2018/blob/master/appunti/Lesson1_05_Control_flow.md">While Loop</a>
+            <ul>
+                <li><a href="http://github.com/maboglia/Javascript2018/blob/master/esempi/02_control_flow/02_while_loop.js">esempi</a></li>
+            </ul>
+        </li>
+    </ul>
+    <h1><a href="#tipi-di-dato" aria-hidden="true" class="anchor" id="user-content-tipi-di-dato"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tipi
+        di dato</h1>
+    <h2><a href="#boolean" aria-hidden="true" class="anchor" id="user-content-boolean"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Boolean</h2>
+    <ul>
+        <li>Boolean è la rappresentazione di tipo oggetto di una variabile logica.</li>
+        <li>Booleans
+            <ul>
+                <li>operazioni logiche</li>
+                <li>comparazione tra numeri e valori booleani</li>
+                <li>undefined e null</li>
+                <li>Boolean() verifica se un'espressione è booleana</li>
+            </ul>
+        </li>
+    </ul>
+    <h3><a href="#per-esempio-1" aria-hidden="true" class="anchor" id="user-content-per-esempio-1"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Per
+        esempio
+    </h3>
+    <div class="highlight highlight-source-js"><pre><span class="pl-c"><span class="pl-c">//</span>Valori logici</span>
+<span class="pl-k">var</span> a<span class="pl-k">=</span><span class="pl-c1">true</span>
+<span class="pl-k">var</span> b<span class="pl-k">=</span><span class="pl-c1">false</span></pre></div>
+    <p>Sono valori falsi i seguenti:</p>
+    <div class="highlight highlight-source-js"><pre><span class="pl-c1">undefined</span>
+<span class="pl-c1">null</span>
+<span class="pl-c1">0</span>
+<span class="pl-k">-</span><span class="pl-c1">0</span>
+<span class="pl-c1">NaN</span>
+<span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span></pre></div>
+    <h3><a href="#altri-esempi" aria-hidden="true" class="anchor" id="user-content-altri-esempi"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Altri
+        esempi
+    </h3>
+    <ul>
+        <li><a href="http://github.com/maboglia/Javascript2018/blob/master/esempi/01_basic_foundations/012_boolean.html">esempio boolean</a></li>
+        <li><a href="http://github.com/maboglia/Javascript2018/blob/master/esempi/01_basic_foundations/018_ANDLogico.html">esempio AND Logico</a></li>
+        <li><a href="http://github.com/maboglia/Javascript2018/blob/master/esempi/01_basic_foundations/019_ORLogico.html">esempio OR Logico</a></li>
+        <li><a href="http://github.com/maboglia/Javascript2018/blob/master/esempi/01_basic_foundations/020_ORLogico.html">esempio OR Logico</a></li>
+    </ul>
+    <h2><a href="#number" aria-hidden="true" class="anchor" id="user-content-number"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Number</h2>
+    <p>Number è la rappresentazione di tipo oggetto di un tipo numerico.</p>
+    <h3><a href="#js-numbers" aria-hidden="true" class="anchor" id="user-content-js-numbers"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JS
+        numbers
+    </h3>
+    <ul>
+        <li>i numeri in JS sono SEMPRE float a 64-bit</li>
+        <li>il numero massimo di decimali è 17 e la virgola mobile non è sempre accurata</li>
+        <li>il prefisso 0x permette di usare i numeri esadecimali</li>
+        <li>In JS esiste Infinity e -Infinity</li>
+        <li>NaN not a number: p.es. operazioni aritmetiche con le stringhe restituiscono NaN</li>
+        <li>proprietà e metodi principali
+            <ul>
+                <li>Number()</li>
+                <li>parseFloat()</li>
+                <li>parseInt()</li>
+                <li>toString()</li>
+                <li>toFixed()</li>
+                <li>toPrecision()</li>
+                <li>valueOf()</li>
+            </ul>
+        </li>
+    </ul>
+    <h3><a href="#per-esempio-2" aria-hidden="true" class="anchor" id="user-content-per-esempio-2"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Per
+        esempio:
+    </h3>
+    <div class="highlight highlight-source-js"><pre>  <span class="pl-c1">12</span> <span class="pl-c"><span class="pl-c">//</span> numero intero in base decimale.</span>
+<span class="pl-c1">0345</span> <span class="pl-c"><span class="pl-c">//</span> numero intero in base ottale.</span>
+<span class="pl-c1">0xFF</span> <span class="pl-c"><span class="pl-c">//</span> numero intero in base esadecimale.</span>
+
+<span class="pl-c1">3.141592654</span> <span class="pl-c"><span class="pl-c">//</span> numero decimale.</span>
+<span class="pl-c1">.234955</span>     <span class="pl-c"><span class="pl-c">//</span> numero decimale.</span>
+<span class="pl-c1">6.023e23</span>    <span class="pl-c"><span class="pl-c">//</span> numero decimale in notazione esponenziale.</span></pre></div>
+    <h3><a href="#math-object" aria-hidden="true" class="anchor" id="user-content-math-object"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Math
+        Object
+    </h3>
+    <p>Per lavorare con i Number, puoi usare Math che è l'oggetto che concentra molte constanti e funzioni matematiche.</p>
+    <ul>
+        <li><a href="http://github.com/maboglia/Javascript2018/blob/master/appunti/Lesson1_05_MathObject.md">Math Object</a></li>
+    </ul>
+    <hr>
+    <h2><a href="#string" aria-hidden="true" class="anchor" id="user-content-string"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>String</h2>
+    <p>String è la rappresentazione di tipo oggetto di una stringa.</p>
+    <ul>
+        <li><a href="http://github.com/maboglia/Javascript2018/blob/master/appunti/Lesson1_06_StringObject.md">String Object</a></li>
+    </ul>
+    <h2><a href="#valore-nullo-e-valore-undefined" aria-hidden="true" class="anchor" id="user-content-valore-nullo-e-valore-undefined"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>valore
+        nullo e valore undefined</h2>
+    <p>Rappresentano l'assenza di un valore in una variabile o nel ritorno di una function.</p>
+    <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> a<span class="pl-k">=</span><span class="pl-c1">null</span>
+<span class="pl-k">var</span> b<span class="pl-k">=</span><span class="pl-c1">undefined</span></pre></div>
+    <h2><a href="#funzioni" aria-hidden="true" class="anchor" id="user-content-funzioni"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Funzioni</h2>
+    <p>Le funzioni se dichiarano con la parola riservata funzione.</p>
+    <div class="highlight highlight-source-js"><pre><span class="pl-k">function</span> <span class="pl-en">f</span>(<span class="pl-smi">x</span>,<span class="pl-smi">y</span>){
+    <span class="pl-k">return</span> x<span class="pl-k">+</span>y
+}</pre></div>
+    <ul>
+        <li><a href="http://github.com/maboglia/Javascript2018/blob/master/appunti/Lesson1_07_Functions.md">Appunti sulle Funzioni</a></li>
+    </ul>
+    <h2><a href="#date-object" aria-hidden="true" class="anchor" id="user-content-date-object"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Date
+        Object
+    </h2>
+    <ul>
+        <li>Date è l'oggetto utilizzato per la rappresentazione di date.</li>
+        <li>Internamente, questa rappresentazione è un numero che rappresenta i millisecondi trascorsi dalla data: 1 di gennaio del 1970.</li>
+        <li>mostrare le date</li>
+        <li>creare l'oggetto Date()</li>
+        <li>formati e metodi per le date</li>
+        <li>metodi get e metodi set</li>
+    </ul>
+    <h3><a href="#codice-esempio" aria-hidden="true" class="anchor" id="user-content-codice-esempio"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>codice
+        esempio
+    </h3>
+    <p><a href="http://github.com/maboglia/Javascript2018/blob/master/esempi/01_date.js">es data</a></p>
+    <h2><a href="#array" aria-hidden="true" class="anchor" id="user-content-array"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Array</h2>
+    <ul>
+        <li><a href="http://github.com/maboglia/Javascript2018/blob/master/appunti/Lesson1_08_Array.md">JS array</a></li>
+    </ul>
+    <hr>
+    <h2><a href="#objects" aria-hidden="true" class="anchor" id="user-content-objects"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objects</h2>
+    <ul>
+        <li><a href="http://github.com/maboglia/Javascript2018/blob/master/appunti/Lesson1_09_Object.md">JS Objects</a></li>
+    </ul>
+    <h2><a href="#timers" aria-hidden="true" class="anchor" id="user-content-timers"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Timers</h2>
+    <p>Sono funzioni invocate dopo un tempo determinato.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>funzione</th>
+                <th>significato</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>setTimeout()</code></td>
+                <td>Pianifica la invocazione dopo un tempo determinato</td>
+            </tr>
+            <tr>
+                <td><code>setInterval()</code></td>
+                <td>Pianifica l'invocazione dopo un intervallo di tempo</td>
+            </tr>
+            <tr>
+                <td><code>clearTimeout()</code></td>
+                <td>Resetta i timer</td>
+            </tr>
+            <tr>
+                <td><code>clearInterval()</code></td>
+                <td>Resetta i timer</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3><a href="#per-esempio-3" aria-hidden="true" class="anchor" id="user-content-per-esempio-3"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Per
+        esempio
+    </h3>
+    <div class="highlight highlight-source-js"><pre><span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span>(){
+    <span class="pl-en">alert</span>(<span class="pl-s"><span class="pl-pds">'</span>asdf<span class="pl-pds">'</span></span>)
+    }, <span class="pl-c1">10000</span>);
+
+<span class="pl-c1">setInterval</span>(<span class="pl-k">function</span>(){
+    <span class="pl-en">alert</span>(<span class="pl-s"><span class="pl-pds">'</span>asdf<span class="pl-pds">'</span></span>)
+    }, <span class="pl-c1">10000</span>);</pre></div>
+    <h1><a href="#ricapitolando" aria-hidden="true" class="anchor" id="user-content-ricapitolando"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ricapitolando</h1>
+    <ul>
+        <li>Convenzioni del linguaggio e dialogs</li>
+        <li>Variabili</li>
+        <li>Operatori</li>
+        <li>Costrutti condizionali e iterativi</li>
+        <li>Tipi primitivi</li>
+        <li>Tipi reference</li>
+        <li>Booleans</li>
+        <li><a href="http://github.com/maboglia/Javascript2018/blob/master/appunti/Lesson1_07_Functions.md">Function</a></li>
+        <li><a href="http://github.com/maboglia/Javascript2018/blob/master/appunti/Lesson1_05_MathObject.md">Number</a></li>
+        <li><a href="http://github.com/maboglia/Javascript2018/blob/master/appunti/Lesson1_06_StringObject.md">String</a></li>
+        <li><a href="http://github.com/maboglia/Javascript2018/blob/master/appunti/Lesson1_08_Array.md">Array</a></li>
+        <li><a href="http://github.com/maboglia/Javascript2018/blob/master/appunti/Lesson1_09_Object.md">Object</a></li>
+        <li>Timers</li>
+    </ul>
+</article>
